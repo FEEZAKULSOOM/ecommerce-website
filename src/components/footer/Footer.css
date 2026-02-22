@@ -1,0 +1,248 @@
+/* Footer.css - FULLY CENTERED */
+
+.footer {
+    background: #0A1F33;
+    color: white;
+    padding: 60px 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    /* Centers all grid items */
+    align-items: start;
+}
+
+/* Brand Section - Centered */
+.footer-section.brand {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.logo-icon {
+    color: #FF6B00;
+    font-size: 28px;
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 250px;
+    text-align: center;
+}
+
+/* Section Headers - Centered */
+.footer-section {
+    text-align: center;
+}
+
+.footer-section h4 {
+    color: #FF6B00;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    /* Makes the underline relative to text width */
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: #FF6B00;
+}
+
+/* Lists - Centered */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-section ul li:hover {
+    color: #FF6B00;
+    /* Removed transform for centered layout */
+}
+
+.footer-section ul li svg {
+    font-size: 16px;
+    color: #FF6B00;
+}
+
+/* Bottom Bar - Centered */
+.footer-bottom {
+    max-width: 1400px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet Landscape */
+@media (max-width: 992px) {
+    .footer-container {
+        gap: 30px;
+    }
+
+    .footer-tagline {
+        max-width: 220px;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 30px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+
+    .footer-section.brand {
+        grid-column: span 2;
+    }
+
+    .footer-tagline {
+        max-width: 400px;
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 576px) {
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+        gap: 35px;
+    }
+
+    .footer-section.brand {
+        grid-column: span 2;
+    }
+
+    .footer-tagline {
+        font-size: 13px;
+    }
+
+    .footer-section h4 {
+        font-size: 17px;
+    }
+
+    .footer-section ul li {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-section {
+        grid-column: span 1 !important;
+    }
+
+    .footer-tagline {
+        max-width: 280px;
+    }
+
+    .footer-bottom {
+        margin: 30px auto 0;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .footer {
+        padding: 30px 15px 15px;
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+
+    .footer-logo {
+        font-size: 22px;
+    }
+
+    .logo-icon {
+        font-size: 24px;
+    }
+
+    .footer-tagline {
+        font-size: 12px;
+        max-width: 240px;
+    }
+
+    .footer-section h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .footer-section ul li {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+        margin: 25px auto 0;
+    }
+}
+
+
+.footer-section a {
+    text-decoration: none;
+}

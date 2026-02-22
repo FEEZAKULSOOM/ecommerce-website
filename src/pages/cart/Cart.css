@@ -1,0 +1,342 @@
+/* Empty Cart Styles - Add to your existing Cart.css */
+/* Cart.css - Only for Cart container */
+
+.cart {
+    min-height: 100vh;
+
+    padding: 25px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .cart {
+        padding: 30px 30px;
+        /* Changed from 70px to 30px */
+        gap: 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cart {
+        padding: 40px 40px;
+        /* Changed from 80px to 40px */
+        gap: 32px;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .cart {
+        padding: 20px 16px;
+        /* Changed from 40px to 20px */
+        gap: 20px;
+    }
+}
+
+/* Optional: If you want to add spacing between CartCard components */
+.cart>* {
+    margin-bottom: 0;
+    /* Remove any default margins */
+}
+
+/* If you want the cards to be centered */
+.cart {
+    align-items: center;
+}
+
+.cart>* {
+    width: 100%;
+    max-width: 900px;
+}
+
+.empty-cart {
+    width: 100%;
+    max-width: 400px;
+
+    /* REDUCED from 40px */
+    text-align: center;
+    padding: 40px 25px;
+    /* REDUCED from 60px 30px */
+    background: white;
+    border-radius: 20px;
+    /* REDUCED from 24px */
+    box-shadow: 0 20px 40px rgba(10, 31, 51, 0.12);
+    /* Increased spread and opacity */
+    border: 1px solid rgba(255, 107, 0, 0.1);
+    animation: fadeInUp 0.6s ease;
+}
+
+.empty-cart-icon {
+    font-size: 60px;
+    /* REDUCED from 80px */
+    color: #FF6B00;
+    opacity: 0.3;
+    margin-bottom: 15px;
+    /* REDUCED from 20px */
+    animation: float 3s infinite ease-in-out;
+}
+
+.empty-cart h2 {
+    font-size: 24px;
+    /* REDUCED from 28px */
+    font-weight: 700;
+    color: #0A1F33;
+    margin-bottom: 8px;
+    /* REDUCED from 12px */
+}
+
+.empty-cart p {
+    font-size: 14px;
+    /* REDUCED from 16px */
+    color: #666;
+    margin-bottom: 25px;
+    /* REDUCED from 30px */
+    line-height: 1.5;
+    /* REDUCED from 1.6 */
+    max-width: 300px;
+    /* REDUCED from 350px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shop-now-btn {
+    background: linear-gradient(135deg, #FF6B00, #FF8533);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    /* REDUCED from 14px 35px */
+    border-radius: 40px;
+    /* REDUCED from 50px */
+    font-size: 15px;
+    /* REDUCED from 16px */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* REDUCED from 10px */
+    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+}
+
+.shop-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 107, 0, 0.3);
+}
+
+.shop-now-btn svg {
+    font-size: 16px;
+    /* REDUCED from 18px */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .empty-cart {
+        padding: 30px 20px;
+        /* REDUCED from 40px 20px */
+        margin: 15px auto;
+        /* REDUCED from 20px auto */
+    }
+
+    .empty-cart-icon {
+        font-size: 50px;
+        /* REDUCED from 60px */
+    }
+
+    .empty-cart h2 {
+        font-size: 22px;
+        /* REDUCED from 24px */
+    }
+
+    .empty-cart p {
+        font-size: 13px;
+        /* REDUCED from 14px */
+    }
+
+    .shop-now-btn {
+        padding: 10px 25px;
+        /* REDUCED from 12px 30px */
+        font-size: 14px;
+        /* REDUCED from 15px */
+    }
+}
+
+
+/* Extraordinary Price Section - Refined & Compact */
+
+.price-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto 0;
+    padding: 18px 24px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(10, 31, 51, 0.06);
+    border: 1px solid rgba(255, 107, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.price-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(255, 107, 0, 0.12);
+}
+
+/* Subtle top accent - smaller */
+.price-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, #FF6B00, #FF8533);
+    border-radius: 2px;
+}
+
+/* Left section - Total Products */
+.price-section span:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0A1F33;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.price-section span:first-child::before {
+    content: '🛒';
+    font-size: 18px;
+    color: #FF6B00;
+    animation: bounce 2s ease infinite;
+}
+
+/* Right section - Total Price */
+.price-section span:last-child {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF6B00;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 107, 0, 0.05);
+    padding: 8px 18px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.price-section span:last-child:hover {
+    background: #FF6B00;
+    color: white;
+    transform: scale(1.02);
+}
+
+.price-section span:last-child::before {
+    content: '';
+    font-size: 18px;
+    font-weight: 600;
+    color: inherit;
+}
+
+/* REMOVED - orange ball on price (no ::after pseudo-element) */
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .price-section {
+        padding: 16px 20px;
+    }
+
+    .price-section span:first-child {
+        font-size: 15px;
+    }
+
+    .price-section span:last-child {
+        font-size: 22px;
+        padding: 6px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .price-section {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .price-section span:first-child {
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .price-section span:last-child {
+        font-size: 22px;
+        padding: 8px 25px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-section {
+        padding: 14px;
+        margin: 18px auto 0;
+    }
+
+    .price-section span:first-child {
+        font-size: 15px;
+    }
+
+    .price-section span:last-child {
+        font-size: 20px;
+        padding: 6px 20px;
+    }
+}

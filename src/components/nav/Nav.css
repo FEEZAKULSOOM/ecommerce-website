@@ -1,0 +1,672 @@
+/* ============================================
+   NAVIGATION COMPONENT STYLES
+   Main navigation bar with top and bottom sections
+============================================ */
+
+/* ===== MAIN NAVIGATION CONTAINER ===== */
+.nav {
+    width: 100%;
+    /* Full width */
+    height: 160px;
+    /* Fixed height */
+    box-shadow: var(--shadow-md);
+    /* Medium shadow from variables */
+    position: sticky;
+    /* Sticks to top on scroll */
+    top: 0;
+    /* Stick to top */
+    z-index: 1000;
+    /* Stay above other content */
+}
+
+/* Navigation links styling */
+.nav a {
+    color: #fff;
+    /* White text by default */
+    text-decoration: none;
+    /* No underline */
+}
+
+/* ===== TOP NAVIGATION BAR ===== */
+.top-nav {
+    width: 100%;
+    /* Full width */
+    height: 70%;
+    /* 70% of nav height (112px) */
+    background: linear-gradient(135deg, var(--navy-primary), var(--navy-dark));
+    /* Blue gradient */
+    display: flex;
+    /* Flexbox layout */
+    align-items: center;
+    /* Vertically center */
+    justify-content: space-between;
+    /* Space between logo, search, cart */
+    padding: 0 40px;
+    /* Horizontal padding */
+    color: var(--text-white);
+    /* White text */
+    position: relative;
+    /* For overlay positioning */
+    overflow: hidden;
+    /* Hide overflow for pattern */
+}
+
+/* Subtle pattern overlay for depth */
+.top-nav::before {
+    content: '';
+    /* Required for pseudo-element */
+    position: absolute;
+    /* Cover entire top-nav */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    /* Allow clicks to pass through */
+}
+
+/* ===== LOGO STYLING ===== */
+.top-nav .logo {
+    font-size: 28px;
+    /* Large text */
+    font-weight: 700;
+    /* Bold */
+    display: flex;
+    /* Flex for icon and text */
+    align-items: center;
+    /* Vertically center */
+    gap: 8px;
+    /* Space between text and icon */
+    letter-spacing: -0.5px;
+    /* Slightly tighter spacing */
+    position: relative;
+    /* Above overlay */
+    z-index: 2;
+    /* Higher than overlay */
+}
+
+/* Logo icon (shopping cart) */
+.top-nav .logo svg {
+    color: var(--accent-orange);
+    /* Orange color */
+    font-size: 32px;
+    /* Icon size */
+    filter: drop-shadow(0 2px 4px rgba(255, 107, 0, 0.3));
+    /* Orange glow */
+}
+
+/* ===== SEARCH BOX CONTAINER ===== */
+.top-nav .search-box {
+    width: 45%;
+    /* 45% of top-nav width */
+    height: 50px;
+    /* Fixed height */
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Subtle white border */
+    display: flex;
+    /* Flex for input and button */
+    align-items: center;
+    /* Vertically center */
+    border-radius: 50px;
+    /* Pill shape */
+    overflow: hidden;
+    /* Hide overflow for rounded corners */
+    transition: var(--transition);
+    /* Smooth transitions */
+    position: relative;
+    /* Above overlay */
+    z-index: 2;
+    /* Higher than overlay */
+}
+
+/* Search box hover and focus states */
+.top-nav .search-box:hover,
+.top-nav .search-box:focus-within {
+    background: var(--bg-white);
+    /* White background */
+    box-shadow: var(--shadow-lg);
+    /* Large shadow */
+    border-color: transparent;
+    /* Remove border */
+}
+
+/* Search icon inside search box */
+.top-nav .search-box svg {
+    color: var(--text-white);
+    /* White icon */
+    width: 24px;
+    /* Icon width */
+    height: 24px;
+    /* Icon height */
+    margin-left: 20px;
+    /* Space from left */
+    transition: var(--transition);
+    /* Smooth transition */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+/* Search icon color on hover/focus */
+.top-nav .search-box:hover svg,
+.top-nav .search-box:focus-within svg {
+    color: var(--accent-orange);
+    /* Orange icon */
+}
+
+/* Search input field */
+.top-nav .search-box input {
+    flex: 1;
+    /* Take remaining space */
+    height: 100%;
+    /* Full height */
+    padding: 0 20px;
+    /* Horizontal padding */
+    border: none;
+    /* No border */
+    outline: none;
+    /* No outline */
+    font-size: 15px;
+    /* Text size */
+    background: transparent;
+    /* Transparent background */
+    color: var(--text-white);
+    /* White text */
+    transition: var(--transition);
+    /* Smooth transition */
+    min-width: 0;
+    /* Allow shrinking */
+}
+
+/* Input text color on hover/focus */
+.top-nav .search-box:hover input,
+.top-nav .search-box:focus-within input {
+    color: var(--text-dark);
+    /* Dark text */
+}
+
+/* Input placeholder styling */
+.top-nav .search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    /* Semi-transparent white */
+    font-weight: 300;
+    /* Light font */
+}
+
+/* Placeholder color on hover/focus */
+.top-nav .search-box:hover input::placeholder,
+.top-nav .search-box:focus-within input::placeholder {
+    color: var(--text-gray);
+    /* Gray placeholder */
+}
+
+/* ===== SEARCH BUTTON ===== */
+.top-nav .search-box button {
+    height: 100%;
+    /* Full height */
+    padding: 0 25px;
+    /* Horizontal padding */
+    display: flex;
+    /* Flex for text and icon */
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Horizontally center */
+    gap: 8px;
+    /* Space between text and icon */
+    border: none;
+    /* No border */
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+    /* Orange gradient */
+    color: var(--text-white);
+    /* White text */
+    font-size: 15px;
+    /* Text size */
+    font-weight: 500;
+    /* Medium weight */
+    cursor: pointer;
+    /* Hand cursor */
+    transition: var(--transition);
+    /* Smooth transition */
+    white-space: nowrap;
+    /* Prevent text wrap */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+/* Button hover states */
+.top-nav .search-box button:hover,
+.top-nav .search-box button:focus,
+.top-nav .search-box button:active {
+    background: linear-gradient(135deg, var(--accent-orange-light), var(--accent-orange));
+    /* Reversed gradient */
+    outline: none;
+    /* No outline */
+    color: var(--text-white);
+    /* White text */
+}
+
+/* Button icon styling */
+.top-nav .search-box button svg {
+    margin-left: 0;
+    /* No left margin */
+    color: var(--text-white) !important;
+    /* Force white color */
+    font-size: 18px;
+    /* Icon size */
+    transition: var(--transition);
+    /* Smooth transition */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+/* Icon animation on button hover */
+.top-nav .search-box button:hover svg,
+.top-nav .search-box button:focus svg,
+.top-nav .search-box button:active svg {
+    transform: translateX(3px);
+    /* Slide right */
+}
+
+/* ===== USER ACTIONS (Not used in JSX) ===== */
+.user-actions {
+    display: none;
+    /* Hidden - not in JSX */
+}
+
+/* ===== CART BOX ===== */
+.cart-box {
+    position: relative;
+    /* For badge positioning */
+    padding: 8px 16px;
+    /* Padding around icon */
+    cursor: pointer;
+    /* Hand cursor */
+    transition: all 0.2s ease;
+    /* Smooth transition */
+}
+
+/* Cart icon */
+.cart-box svg {
+    font-size: 30px;
+    /* Icon size */
+}
+
+/* Cart item count badge */
+.cart-box span {
+    position: absolute;
+    /* Position over icon */
+    top: -5px;
+    /* Above icon */
+    right: 0;
+    /* Right side */
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+    /* Orange gradient */
+    color: var(--text-white);
+    /* White text */
+    font-size: 12px;
+    /* Small text */
+    font-weight: 600;
+    /* Bold */
+    min-width: 22px;
+    /* Minimum width */
+    height: 22px;
+    /* Fixed height */
+    display: flex;
+    /* Center content */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* Circle shape */
+    border: 2px solid var(--navy-primary);
+    /* Blue border */
+    padding: 0 4px;
+    /* Horizontal padding */
+}
+
+/* Click animation */
+.cart-box:active {
+    transform: scale(0.95);
+    /* Shrink slightly on click */
+}
+
+/* Cart icon hover effect */
+.cart-box:hover svg {
+    color: var(--accent-orange);
+    /* Orange icon */
+    transform: scale(1.1);
+    /* Slight grow */
+}
+
+/* ===== BOTTOM NAVIGATION BAR ===== */
+.bottom-nav {
+    width: 100%;
+    /* Full width */
+    height: 30%;
+    /* 30% of nav height (48px) */
+    background: var(--bg-white);
+    /* White background */
+    display: flex;
+    /* Flex layout */
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Center horizontally */
+    gap: 40px;
+    /* Space between links */
+    color: var(--text-dark);
+    /* Dark text */
+    list-style: none;
+    /* No bullet points */
+    font-size: 15px;
+    /* Text size */
+    font-weight: 500;
+    /* Medium weight */
+    padding: 0 40px;
+    /* Horizontal padding */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle bottom border */
+    position: relative;
+    /* For positioning */
+    box-shadow: var(--shadow-sm);
+    /* Small shadow */
+    margin: 0 auto;
+    /* Center */
+}
+
+/* Bottom nav list items */
+.bottom-nav li {
+    padding: 12px 0;
+    /* Vertical padding */
+    cursor: pointer;
+    /* Hand cursor */
+    transition: var(--transition);
+    /* Smooth transition */
+    position: relative;
+    /* For underline effect */
+    color: var(--text-dark);
+    /* Dark text */
+    font-weight: 500;
+    /* Medium weight */
+    letter-spacing: 0.3px;
+    /* Slight letter spacing */
+    white-space: nowrap;
+    /* Prevent wrap */
+}
+
+/* Link inside list item */
+.bottom-nav li a {
+    color: inherit;
+    /* Inherit color from li */
+}
+
+/* Hover effect */
+.bottom-nav li:hover {
+    color: var(--accent-orange);
+    /* Orange on hover */
+}
+
+/* ===== UNDERLINE EFFECT ===== */
+.bottom-nav li::after {
+    content: '';
+    /* Required */
+    position: absolute;
+    /* Position relative to li */
+    bottom: 8px;
+    /* Below text */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Perfect centering */
+    width: 0;
+    /* Start with zero width */
+    height: 3px;
+    /* Underline thickness */
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-orange-light));
+    /* Orange gradient */
+    transition: var(--transition);
+    /* Smooth width transition */
+    border-radius: 3px 3px 0 0;
+    /* Rounded top corners */
+}
+
+/* Show underline on hover or active */
+.bottom-nav li:hover::after,
+.bottom-nav li.active-link::after {
+    width: 100%;
+    /* Full width underline */
+}
+
+/* ===== ACTIVE LINK STYLING ===== */
+.bottom-nav li.active-link {
+    color: var(--accent-orange) !important;
+    /* Orange text for active */
+}
+
+.bottom-nav li.active-link a {
+    color: var(--accent-orange);
+    /* Orange link */
+}
+
+/* ===== DEAL BADGE (Optional) ===== */
+.deal-badge {
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+    /* Orange gradient */
+    color: var(--text-white);
+    /* White text */
+    font-size: 10px;
+    /* Small text */
+    font-weight: 600;
+    /* Bold */
+    padding: 2px 8px;
+    /* Padding */
+    border-radius: 20px;
+    /* Pill shape */
+    margin-left: 5px;
+    /* Space from text */
+    animation: pulse 2s infinite;
+    /* Pulsing animation */
+    letter-spacing: 0.5px;
+    /* Letter spacing */
+    white-space: nowrap;
+    /* Prevent wrap */
+}
+
+/* Pulse animation for deal badge */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        /* Normal size */
+    }
+
+    50% {
+        transform: scale(1.05);
+        /* Slightly larger */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Back to normal */
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+/* ===== TABLET LANDSCAPE (1024px and below) ===== */
+@media (max-width: 1024px) {
+    .top-nav .search-box {
+        width: 40%;
+        /* Smaller search box */
+    }
+
+    .bottom-nav {
+        gap: 25px;
+        /* Smaller gap between links */
+        padding: 0 20px;
+        /* Smaller padding */
+    }
+}
+
+/* ===== TABLET PORTRAIT (850px and below) ===== */
+@media (max-width: 850px) {
+    .nav {
+        height: auto;
+        /* Auto height - content determines */
+    }
+
+    .top-nav {
+        height: auto;
+        /* Auto height */
+        padding: 15px 30px;
+        /* Padding */
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        gap: 15px;
+        /* Gap between wrapped items */
+    }
+
+    .top-nav .search-box {
+        width: 100%;
+        /* Full width on tablet */
+        order: 3;
+        /* Move to bottom */
+    }
+
+    .bottom-nav {
+        height: auto;
+        /* Auto height */
+        padding: 15px 20px;
+        /* Padding */
+        display: flex;
+        /* Keep flex */
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        gap: 20px 30px;
+        /* Gap between wrapped items */
+        justify-content: center;
+        /* Center items */
+    }
+
+    .bottom-nav li {
+        padding: 8px 0;
+        /* Smaller padding */
+    }
+
+    .bottom-nav li::after {
+        bottom: 4px;
+        /* Adjust underline position */
+    }
+}
+
+/* ===== MOBILE (750px and below) ===== */
+@media (max-width: 750px) {
+    .top-nav {
+        padding: 15px 20px;
+        /* Smaller padding */
+    }
+
+    .top-nav .logo {
+        font-size: 24px;
+        /* Smaller logo */
+    }
+
+    .top-nav .logo svg {
+        font-size: 28px;
+        /* Smaller icon */
+    }
+
+    .bottom-nav {
+        display: flex;
+        /* Keep flex */
+        flex-wrap: nowrap;
+        /* No wrapping */
+        overflow-x: auto;
+        /* Horizontal scroll if needed */
+        justify-content: flex-start;
+        /* Align left */
+        padding: 15px 20px;
+        /* Padding */
+        gap: 25px;
+        /* Gap between links */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll on iOS */
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+        margin: 0;
+        /* No margin */
+        width: 100%;
+        /* Full width */
+    }
+
+    /* Hide scrollbar for Chrome/Safari */
+    .bottom-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bottom-nav li {
+        flex-shrink: 0;
+        /* Prevent shrinking */
+        font-size: 14px;
+        /* Smaller text */
+    }
+
+    .cart-box {
+        padding: 8px 12px;
+        /* Smaller padding */
+    }
+
+    .cart-box span {
+        right: -2px;
+        /* Adjust badge position */
+    }
+
+    .bottom-nav li::after {
+        bottom: 4px;
+        /* Adjust underline */
+    }
+}
+
+/* ===== SMALL MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+    .top-nav {
+        padding: 12px 15px;
+        /* Even smaller padding */
+    }
+
+    /* Hide button text, show only icon */
+    .top-nav .search-box button span {
+        display: none;
+    }
+
+    .top-nav .search-box button {
+        padding: 0 15px;
+        /* Smaller button */
+    }
+
+    .bottom-nav {
+        padding: 12px 15px;
+        /* Smaller padding */
+        gap: 20px;
+        /* Smaller gap */
+        justify-content: center;
+        /* Center items */
+    }
+
+    .bottom-nav li {
+        font-size: 13px;
+        /* Smaller text */
+    }
+
+    .bottom-nav li::after {
+        bottom: 2px;
+        /* Adjust underline */
+        height: 2px;
+        /* Thinner underline */
+    }
+}

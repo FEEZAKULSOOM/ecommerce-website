@@ -1,0 +1,213 @@
+/* Contact.css - Professional & Clean - COMPACT VERSION */
+
+.contact-page {
+    min-height: 100vh;
+    background: #f8f9fc;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    max-width: 450px;
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(10, 31, 51, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.1);
+}
+
+.contact-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0A1F33;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 107, 0, 0.15);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0A1F33;
+    letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FF6B00;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #FF6B00;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #FF6B00, #FF8533);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 14px rgba(255, 107, 0, 0.2);
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.success-message {
+    color: #27AE60;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px;
+    background: rgba(39, 174, 96, 0.1);
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+.error-message {
+    color: #E74C3C;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+/* Responsive Design - Even smaller for mobile */
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 30px 16px;
+    }
+
+    .contact-container {
+        padding: 25px 20px;
+        max-width: 400px;
+    }
+
+    .contact-title {
+        font-size: 26px;
+    }
+
+    .contact-subtitle {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page {
+        padding: 20px 12px;
+    }
+
+    .contact-container {
+        padding: 20px 16px;
+        max-width: 100%;
+    }
+
+    .contact-title {
+        font-size: 24px;
+    }
+
+    .contact-subtitle {
+        font-size: 12px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .contact-form {
+        gap: 12px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 25px;
+    }
+
+    .success-message,
+    .error-message {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,238 @@
+/* CartCard.css - Blue/Orange Theme - Refined */
+
+/* ===== MAIN CARD CONTAINER ===== */
+.cart-card {
+    display: flex;
+    /* Side-by-side layout */
+    justify-content: space-between;
+    /* Push left and right apart */
+    align-items: center;
+    /* Vertically center content */
+    background: white;
+    /* Clean white background */
+    border-radius: 30px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Inner spacing */
+    box-shadow: 0 20px 40px rgba(10, 31, 51, 0.12);
+    /* Soft blue shadow */
+    transition: all 0.3s ease;
+    /* Smooth hover effects */
+    border: 1px solid rgba(10, 31, 51, 0.08);
+    /* Subtle blue border */
+    width: 100%;
+    /* Full width container */
+}
+
+/* Hover effect on cart card */
+.cart-card:hover {
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.1);
+    /* Orange shadow */
+    border-color: rgba(255, 107, 0, 0.2);
+    /* Orange border tint */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+/* ===== LEFT SECTION (Image + Name/Price) ===== */
+.left-card {
+    display: flex;
+    /* Horizontal layout */
+    align-items: center;
+    /* Vertically center */
+    gap: 16px;
+    /* Space between image and text */
+    flex: 1;
+    /* Take available space */
+}
+
+/* Product image styling */
+.left-card img {
+    width: 80px;
+    /* Fixed width */
+    height: 80px;
+    /* Fixed height */
+    object-fit: cover;
+    /* Crop image to fit */
+    border-radius: 12px;
+    /* Rounded corners */
+    background: #f0f0f0;
+    /* Fallback background */
+    border: 1px solid rgba(10, 31, 51, 0.08);
+    /* Subtle border */
+    transition: all 0.3s ease;
+}
+
+/* Image border turns orange on card hover */
+.cart-card:hover .left-card img {
+    border-color: #FF6B00;
+    /* Orange brand color */
+}
+
+/* Name and price container */
+.name-price {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically */
+    gap: 6px;
+    /* Space between name and price */
+}
+
+/* Product name styling */
+.name-price span:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0A1F33;
+    /* Dark blue text */
+    line-height: 1.4;
+}
+
+/* Product price styling */
+.name-price span:last-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FF6B00;
+    /* Orange brand color */
+}
+
+/* ===== RIGHT SECTION (Remove Button) ===== */
+.right-card {
+    display: flex;
+    align-items: center;
+}
+
+/* Remove button styling */
+.right-card button {
+    background: transparent;
+    /* No background */
+    border: 1.5px solid #0A1F33;
+    /* Blue border */
+    color: #0A1F33;
+    /* Blue text */
+    padding: 8px 20px;
+    /* Button padding */
+    border-radius: 40px;
+    /* Pill shape */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    /* Hand cursor */
+    transition: all 0.3s ease;
+    /* Smooth hover */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between text and icon */
+}
+
+/* Remove button hover effect */
+.right-card button:hover {
+    background: #FF6B00;
+    /* Orange background */
+    border-color: #FF6B00;
+    /* Orange border */
+    color: white;
+    /* White text */
+    transform: translateY(-2px);
+    /* Slight lift */
+    box-shadow: 0 6px 14px rgba(255, 107, 0, 0.25);
+    /* Orange glow */
+}
+
+/* Trash icon styling */
+.right-card button svg {
+    font-size: 14px;
+    transition: transform 0.2s ease;
+    /* Smooth rotation */
+}
+
+/* Icon spins on button hover */
+.right-card button:hover svg {
+    transform: rotate(360deg);
+    /* Full spin animation */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Tablet screens (700px and below) */
+@media (max-width: 700px) {
+    .cart-card {
+        padding: 16px;
+        /* Smaller padding */
+    }
+
+    .left-card {
+        gap: 14px;
+        /* Smaller gap */
+    }
+
+    .left-card img {
+        width: 70px;
+        /* Smaller image */
+        height: 70px;
+    }
+
+    .name-price span:first-child {
+        font-size: 15px;
+        /* Smaller text */
+    }
+
+    .name-price span:last-child {
+        font-size: 18px;
+        /* Smaller price */
+    }
+}
+
+/* Mobile screens (550px and below) */
+@media (max-width: 550px) {
+    .cart-card {
+        flex-direction: column;
+        /* Stack vertically */
+        align-items: flex-start;
+        /* Align to left */
+        gap: 16px;
+        /* Space between stacked sections */
+        padding: 18px;
+    }
+
+    .left-card {
+        width: 100%;
+        /* Full width */
+    }
+
+    .right-card {
+        width: 100%;
+        /* Full width */
+    }
+
+    .right-card button {
+        width: 100%;
+        /* Full width button */
+        justify-content: center;
+        /* Center button text */
+        padding: 10px;
+        /* Larger tap target */
+    }
+
+    .left-card img {
+        width: 65px;
+        /* Slightly smaller image */
+        height: 65px;
+    }
+}
+
+/* Small mobile screens (380px and below) */
+@media (max-width: 380px) {
+    .left-card {
+        flex-direction: column;
+        /* Stack image and text */
+        align-items: flex-start;
+        /* Align to left */
+    }
+
+    .left-card img {
+        width: 100%;
+        /* Full width image */
+        height: 150px;
+        /* Fixed height */
+    }
+}
