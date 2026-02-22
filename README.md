@@ -1,6 +1,4 @@
-Here's your updated README.md with your actual project details:
 
-```markdown
 <div align="center">
   
 ![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=S-Hive%20E-Commerce&fontSize=45&fontColor=ffffff&animation=twinkling)
@@ -297,19 +295,3 @@ If you like this project, please consider giving it a ⭐ on GitHub!
 
 </div>
 ```
-
-## **CHANGES MADE:**
-
-| Original (Property Rental) | Updated (S-Hive E-Commerce) |
-|----------------------------|------------------------------|
-| Property rental theme | E-commerce shopping theme |
-| Gold color (#C89B3C) | Orange color (#FF6B00) |
-| Property categories | Product categories (Kitchen, Electronics, etc.) |
-| Context API | Redux Toolkit |
-| Formspree API | Session Storage API |
-| Property images | Product dummy data |
-| Login/Signup pages | Cart functionality |
-| Houses/Rooms routes | Shop/Cart routes |
-| Property listing form | Product display cards |
-
-Your README now accurately reflects your **S-Hive E-Commerce** project with the blue (#0A1F33) and orange (#FF6B00) theme!
