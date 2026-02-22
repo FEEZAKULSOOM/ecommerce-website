@@ -279,7 +279,7 @@ MIT License © 2026 **S-Hive E-Commerce**
 
 If you like this project, please consider giving it a ⭐ on GitHub!
 
-[![GitHub stars](https://img.shields.io/github/stars/FEEZAKULSOOM/s-hive-ecommerce?style=social)](https://github.com/FEEZAKULSOOM/s-hive-ecommerce)
+[![GitHub stars](https://img.shields.io/github/stars/FEEZAKULSOOM/s-hive-ecommerce?style=social)](https://github.com/FEEZAKULSOOM/ecommerce-website)
 
 ---
 
