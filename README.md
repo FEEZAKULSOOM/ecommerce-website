@@ -66,7 +66,7 @@
 
 ### 🌐 **Experience Live**
 
-**👉 [Your Netlify Link Here](https://your-app-name.netlify.app/)**
+**👉 [https://s-hive.netlify.app/](https://s-hive.netlify.app/)**
 
 | Category | Sample Products |
 |----------|-----------------|
